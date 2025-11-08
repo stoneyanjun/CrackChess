@@ -13,4 +13,5 @@ struct HomeState: Equatable, Sendable {
     var isLoading = true
     var loadError: String?
     var webViewID = UUID()
+    var isReadyForAnalyze = false
 }

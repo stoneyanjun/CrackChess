@@ -14,4 +14,5 @@ enum HomeAction: Equatable, Sendable {
     case loadFinished
     case loadFailed(String)
     case reload
+    case readyForAnalyze
 }

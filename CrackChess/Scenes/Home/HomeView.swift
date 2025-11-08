@@ -11,90 +11,66 @@ import ComposableArchitecture
 
 struct HomeView: View {
     let store: StoreOf<HomeFeature>
-
+    
     var body: some View {
         WithViewStore(store, observe: { $0 }) { viewStore in
-            ZStack {
-                // WebView Container
-                WebViewContainer(
-                    id: viewStore.webViewID,
-                    url: viewStore.url,
-                    onStart: { viewStore.send(.loadStarted) },
-                    onFinish: { viewStore.send(.loadFinished) },
-                    onFail: { error in viewStore.send(.loadFailed(error.localizedDescription)) }
-                )
-
-                // Optional loading overlay
-                if viewStore.isLoading {
-                    ProgressView("Loading…")
-                        .progressViewStyle(.circular)
-                        .controlSize(.large)
+            GeometryReader { geo in
+                ZStack(alignment: .topLeading) {
+                    // --- Background WebView ---
+                    WebViewContainer(
+                        id: viewStore.webViewID,
+                        url: viewStore.url,
+                        onStart: { viewStore.send(.loadStarted) },
+                        onFinish: { viewStore.send(.loadFinished) },
+                        onFail: { error in viewStore.send(.loadFailed(error.localizedDescription)) }
+                    )
+                    .ignoresSafeArea()
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    
+                    // --- Left Panel overlay ---
+                    LeftPanelView(
+                        width: geo.size.width / 6,
+                        height: geo.size.height,
+                        onReady: { viewStore.send(.readyForAnalyze) }
+                    )
+                    .frame(
+                        width: geo.size.width / 5,
+                        height: geo.size.height
+                    )
+                    .alignmentGuide(.leading) { _ in 0 } // align flush left
+                    .alignmentGuide(.top) { _ in 0 }     // align flush top
+                    .ignoresSafeArea(edges: [.top, .bottom])
+                    
+                    // --- Error overlay ---
+                    if let error = viewStore.loadError {
+                        VStack(spacing: 12) {
+                            Text("⚠️ Failed to load page")
+                                .font(.headline)
+                            Text(error)
+                                .font(.caption)
+                                .multilineTextAlignment(.center)
+                            Button("Reload") {
+                                viewStore.send(.reload)
+                            }
+                        }
                         .padding()
                         .background(
                             RoundedRectangle(cornerRadius: 8)
-                                .fill(Color.black.opacity(0.6))
+                                .fill(Color.black.opacity(0.7))
                         )
                         .foregroundColor(.white)
-                }
-
-                // Optional error display
-                if let error = viewStore.loadError {
-                    VStack(spacing: 12) {
-                        Text("⚠️ Failed to load page")
-                            .font(.headline)
-                        Text(error)
-                            .font(.caption)
-                            .multilineTextAlignment(.center)
-                        Button("Reload") {
-                            viewStore.send(.reload)
-                        }
                     }
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .fill(Color.black.opacity(0.7))
-                    )
-                    .foregroundColor(.white)
+                }
+                .onAppear {
+                    viewStore.send(.onAppear)
+#if os(macOS)
+                    // Auto full-screen on macOS
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        NSApp.windows.first?.toggleFullScreen(nil)
+                    }
+#endif
                 }
             }
-            .onAppear { viewStore.send(.onAppear) }
-            .ignoresSafeArea()
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-    }
-}
-
-/// A SwiftUI wrapper for WKWebView with navigation delegate callbacks.
-private struct WebViewContainer: NSViewRepresentable {
-    let id: UUID
-    let url: URL
-    let onStart: () -> Void
-    let onFinish: () -> Void
-    let onFail: (Error) -> Void
-
-    func makeNSView(context: Context) -> WKWebView {
-        let config = WKWebViewConfiguration()
-        let webView = WKWebView(frame: .zero, configuration: config)
-        webView.navigationDelegate = context.coordinator
-        webView.load(URLRequest(url: url))
-        return webView
-    }
-
-    func updateNSView(_ nsView: WKWebView, context: Context) {
-        // Reload only when ID changes (e.g. after .reload action)
-        if context.coordinator.currentID != id {
-            context.coordinator.currentID = id
-            nsView.load(URLRequest(url: url))
-        }
-    }
-    
-    // Inside HomeView.swift
-    func makeCoordinator() -> Coordinator {
-        Coordinator(
-            currentID: id,
-            onStart: onStart,
-            onFinish: onFinish,
-            onFail: onFail
-        )
     }
 }

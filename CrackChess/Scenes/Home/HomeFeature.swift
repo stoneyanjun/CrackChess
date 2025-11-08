@@ -7,28 +7,16 @@
 
 import Foundation
 import ComposableArchitecture
-import WebKit
 
 @Reducer
 struct HomeFeature {
-    @ObservableState
-    struct State: Equatable {
-        var url = URL(string: "https://www.chesskid.com/home")!
-        var isLoading = true
-        var loadError: String?
-        var webViewID = UUID()       // used to force reload if needed
-    }
-
-    enum Action: Equatable, Sendable {
-        case onAppear
-        case loadStarted
-        case loadFinished
-        case loadFailed(String)
-        case reload
-    }
-
-    func reduce(into state: inout State, action: Action) -> Effect<Action> {
+    
+    typealias State = HomeState
+    typealias Action = HomeAction
+    
+    func reduce(into state: inout State, action: Action) -> Effect<Action>  {
         switch action {
+
         case .onAppear:
             state.isLoading = true
             state.loadError = nil
@@ -41,6 +29,7 @@ struct HomeFeature {
 
         case .loadFinished:
             state.isLoading = false
+            state.isReadyForAnalyze = true
             return .none
 
         case let .loadFailed(message):
@@ -49,10 +38,13 @@ struct HomeFeature {
             return .none
 
         case .reload:
-            // force recreate WKWebView
             state.webViewID = UUID()
             state.isLoading = true
             state.loadError = nil
+            return .none
+
+        case .readyForAnalyze:
+            state.isReadyForAnalyze = true
             return .none
         }
     }
