@@ -28,7 +28,7 @@ struct Board: Equatable, Codable, Sendable {
         var board = Board()
 
         // --- Black back rank (rank 7, top visually) ---
-        let blackBack: [PieceType] = [.rook, .knight, .bishop, .queen, .king, .bishop, .knight, .rook]
+        let blackBack: [PieceType] = [.rook, .knight, .bishop, .king, .queen, .bishop, .knight, .rook]
         for file in 0..<8 {
             board.grid[7][file] = Piece(blackBack[file], .black)
         }
@@ -44,7 +44,7 @@ struct Board: Equatable, Codable, Sendable {
         }
 
         // --- White back rank (rank 0, bottom visually) ---
-        let whiteBack: [PieceType] = [.rook, .knight, .bishop, .queen, .king, .bishop, .knight, .rook]
+        let whiteBack: [PieceType] = [.rook, .knight, .bishop, .king, .queen, .bishop, .knight, .rook]
         for file in 0..<8 {
             board.grid[0][file] = Piece(whiteBack[file], .white)
         }

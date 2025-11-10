@@ -5,6 +5,7 @@
 //  Created by stone on 2025/11/8.
 //
 
+/*
 import SwiftUI
 import ComposableArchitecture
 
@@ -22,5 +23,24 @@ struct CrackChessApp: App {
             .ignoresSafeArea()
         }
         .windowStyle(.hiddenTitleBar)
+    }
+}
+*/
+import SwiftUI
+import ComposableArchitecture
+
+@main
+struct CrackChessApp: App {
+    var body: some Scene {
+        WindowGroup("CrackChess") {
+            HomeView(
+                store: Store(
+                    initialState: HomeState(),
+                    reducer: { HomeFeature() }
+                )
+            )
+            .frame(minWidth: 720, minHeight: 520)
+        }
+        .windowStyle(.automatic)
     }
 }

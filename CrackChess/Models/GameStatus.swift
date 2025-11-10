@@ -28,6 +28,12 @@ struct GameStatus: Equatable, Codable, Sendable {
         self.turn = .white
         self.phase = .playing
     }
+    
+    init(board: Board, turn: PieceColor, phase: Phase) {
+        self.board = board
+        self.turn = turn
+        self.phase = phase
+    }
 
     // MARK: - Game logic
 

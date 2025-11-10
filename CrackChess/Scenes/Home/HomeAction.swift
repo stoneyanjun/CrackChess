@@ -6,7 +6,17 @@
 //
 
 import Foundation
+import SwiftUI
 import ComposableArchitecture
+
+enum CaptureResult: Equatable, Sendable {
+    case success(NSImage)
+    case failure(String)
+}
+enum ClassificationResult: Equatable, Sendable {
+    case success(GameStatus)
+    case failure(String)
+}
 
 enum HomeAction: Equatable, Sendable {
     case onAppear
@@ -14,5 +24,10 @@ enum HomeAction: Equatable, Sendable {
     case loadFinished
     case loadFailed(String)
     case reload
-    case readyForAnalyze
+    
+    case captureStarted
+    case captureCompleted(CaptureResult)
+    
+    case classifyStarted
+    case classifyCompleted(ClassificationResult)
 }
