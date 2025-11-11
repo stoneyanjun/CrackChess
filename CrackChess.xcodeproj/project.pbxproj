@@ -7,104 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB6AF79D2EC3175E00D9E0C6 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6AF79C2EC3175E00D9E0C6 /* OpenCL.framework */; };
-		BB8976322EBEE494003E0F30 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BB8976312EBEE494003E0F30 /* ComposableArchitecture */; };
+		BB5E73122EC3360500057F9D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BB5E73112EC3360500057F9D /* ComposableArchitecture */; };
+		BB5E73152EC3363900057F9D /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = BB5E73142EC3363900057F9D /* Logging */; };
+		BB5E73182EC336C200057F9D /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5E73172EC336C200057F9D /* OpenCL.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BB8976082EBEE3B2003E0F30 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB8975F22EBEE3B0003E0F30 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB8975F92EBEE3B0003E0F30;
-			remoteInfo = CrackChess;
-		};
-		BB8976122EBEE3B2003E0F30 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB8975F22EBEE3B0003E0F30 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB8975F92EBEE3B0003E0F30;
-			remoteInfo = CrackChess;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		BB6AF79C2EC3175E00D9E0C6 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
-		BB8975FA2EBEE3B0003E0F30 /* CrackChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrackChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB8976072EBEE3B2003E0F30 /* CrackChessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrackChessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB8976112EBEE3B2003E0F30 /* CrackChessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrackChessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5E73172EC336C200057F9D /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = System/Library/Frameworks/OpenCL.framework; sourceTree = SDKROOT; };
+		BBE3DDF22EC334F80063D2C3 /* CrackChess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrackChess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BB8975FC2EBEE3B0003E0F30 /* CrackChess */ = {
+		BBE3DDF42EC334F80063D2C3 /* CrackChess */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CrackChess;
-			sourceTree = "<group>";
-		};
-		BB89760A2EBEE3B2003E0F30 /* CrackChessTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CrackChessTests;
-			sourceTree = "<group>";
-		};
-		BB8976142EBEE3B2003E0F30 /* CrackChessUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CrackChessUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		BB8975F72EBEE3B0003E0F30 /* Frameworks */ = {
+		BBE3DDEF2EC334F80063D2C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6AF79D2EC3175E00D9E0C6 /* OpenCL.framework in Frameworks */,
-				BB8976322EBEE494003E0F30 /* ComposableArchitecture in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB8976042EBEE3B2003E0F30 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB89760E2EBEE3B2003E0F30 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BB5E73182EC336C200057F9D /* OpenCL.framework in Frameworks */,
+				BB5E73152EC3363900057F9D /* Logging in Frameworks */,
+				BB5E73122EC3360500057F9D /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB6AF79B2EC3175E00D9E0C6 /* Frameworks */ = {
+		BB5E73162EC336C200057F9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB6AF79C2EC3175E00D9E0C6 /* OpenCL.framework */,
+				BB5E73172EC336C200057F9D /* OpenCL.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BB8975F12EBEE3B0003E0F30 = {
+		BBE3DDE92EC334F80063D2C3 = {
 			isa = PBXGroup;
 			children = (
-				BB8975FC2EBEE3B0003E0F30 /* CrackChess */,
-				BB89760A2EBEE3B2003E0F30 /* CrackChessTests */,
-				BB8976142EBEE3B2003E0F30 /* CrackChessUITests */,
-				BB6AF79B2EC3175E00D9E0C6 /* Frameworks */,
-				BB8975FB2EBEE3B0003E0F30 /* Products */,
+				BBE3DDF42EC334F80063D2C3 /* CrackChess */,
+				BB5E73162EC336C200057F9D /* Frameworks */,
+				BBE3DDF32EC334F80063D2C3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		BB8975FB2EBEE3B0003E0F30 /* Products */ = {
+		BBE3DDF32EC334F80063D2C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BB8975FA2EBEE3B0003E0F30 /* CrackChess.app */,
-				BB8976072EBEE3B2003E0F30 /* CrackChessTests.xctest */,
-				BB8976112EBEE3B2003E0F30 /* CrackChessUITests.xctest */,
+				BBE3DDF22EC334F80063D2C3 /* CrackChess.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,139 +67,71 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BB8975F92EBEE3B0003E0F30 /* CrackChess */ = {
+		BBE3DDF12EC334F80063D2C3 /* CrackChess */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB89761B2EBEE3B2003E0F30 /* Build configuration list for PBXNativeTarget "CrackChess" */;
+			buildConfigurationList = BBE3DDFD2EC334F90063D2C3 /* Build configuration list for PBXNativeTarget "CrackChess" */;
 			buildPhases = (
-				BB8975F62EBEE3B0003E0F30 /* Sources */,
-				BB8975F72EBEE3B0003E0F30 /* Frameworks */,
-				BB8975F82EBEE3B0003E0F30 /* Resources */,
+				BBE3DDEE2EC334F80063D2C3 /* Sources */,
+				BBE3DDEF2EC334F80063D2C3 /* Frameworks */,
+				BBE3DDF02EC334F80063D2C3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BB8975FC2EBEE3B0003E0F30 /* CrackChess */,
+				BBE3DDF42EC334F80063D2C3 /* CrackChess */,
 			);
 			name = CrackChess;
 			packageProductDependencies = (
-				BB8976312EBEE494003E0F30 /* ComposableArchitecture */,
+				BB5E73112EC3360500057F9D /* ComposableArchitecture */,
+				BB5E73142EC3363900057F9D /* Logging */,
 			);
 			productName = CrackChess;
-			productReference = BB8975FA2EBEE3B0003E0F30 /* CrackChess.app */;
+			productReference = BBE3DDF22EC334F80063D2C3 /* CrackChess.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BB8976062EBEE3B2003E0F30 /* CrackChessTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB89761E2EBEE3B2003E0F30 /* Build configuration list for PBXNativeTarget "CrackChessTests" */;
-			buildPhases = (
-				BB8976032EBEE3B2003E0F30 /* Sources */,
-				BB8976042EBEE3B2003E0F30 /* Frameworks */,
-				BB8976052EBEE3B2003E0F30 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB8976092EBEE3B2003E0F30 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB89760A2EBEE3B2003E0F30 /* CrackChessTests */,
-			);
-			name = CrackChessTests;
-			packageProductDependencies = (
-			);
-			productName = CrackChessTests;
-			productReference = BB8976072EBEE3B2003E0F30 /* CrackChessTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BB8976102EBEE3B2003E0F30 /* CrackChessUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB8976212EBEE3B2003E0F30 /* Build configuration list for PBXNativeTarget "CrackChessUITests" */;
-			buildPhases = (
-				BB89760D2EBEE3B2003E0F30 /* Sources */,
-				BB89760E2EBEE3B2003E0F30 /* Frameworks */,
-				BB89760F2EBEE3B2003E0F30 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB8976132EBEE3B2003E0F30 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				BB8976142EBEE3B2003E0F30 /* CrackChessUITests */,
-			);
-			name = CrackChessUITests;
-			packageProductDependencies = (
-			);
-			productName = CrackChessUITests;
-			productReference = BB8976112EBEE3B2003E0F30 /* CrackChessUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		BB8975F22EBEE3B0003E0F30 /* Project object */ = {
+		BBE3DDEA2EC334F80063D2C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
-					BB8975F92EBEE3B0003E0F30 = {
+					BBE3DDF12EC334F80063D2C3 = {
 						CreatedOnToolsVersion = 26.1;
 						LastSwiftMigration = 2610;
 					};
-					BB8976062EBEE3B2003E0F30 = {
-						CreatedOnToolsVersion = 26.1;
-						TestTargetID = BB8975F92EBEE3B0003E0F30;
-					};
-					BB8976102EBEE3B2003E0F30 = {
-						CreatedOnToolsVersion = 26.1;
-						TestTargetID = BB8975F92EBEE3B0003E0F30;
-					};
 				};
 			};
-			buildConfigurationList = BB8975F52EBEE3B0003E0F30 /* Build configuration list for PBXProject "CrackChess" */;
+			buildConfigurationList = BBE3DDED2EC334F80063D2C3 /* Build configuration list for PBXProject "CrackChess" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = BB8975F12EBEE3B0003E0F30;
+			mainGroup = BBE3DDE92EC334F80063D2C3;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				BB8976302EBEE494003E0F30 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				BB5E73102EC3360500057F9D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				BB5E73132EC3363900057F9D /* XCRemoteSwiftPackageReference "swift-log" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = BB8975FB2EBEE3B0003E0F30 /* Products */;
+			productRefGroup = BBE3DDF32EC334F80063D2C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BB8975F92EBEE3B0003E0F30 /* CrackChess */,
-				BB8976062EBEE3B2003E0F30 /* CrackChessTests */,
-				BB8976102EBEE3B2003E0F30 /* CrackChessUITests */,
+				BBE3DDF12EC334F80063D2C3 /* CrackChess */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		BB8975F82EBEE3B0003E0F30 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB8976052EBEE3B2003E0F30 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB89760F2EBEE3B2003E0F30 /* Resources */ = {
+		BBE3DDF02EC334F80063D2C3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,21 +141,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BB8975F62EBEE3B0003E0F30 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB8976032EBEE3B2003E0F30 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB89760D2EBEE3B2003E0F30 /* Sources */ = {
+		BBE3DDEE2EC334F80063D2C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,21 +150,8 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		BB8976092EBEE3B2003E0F30 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB8975F92EBEE3B0003E0F30 /* CrackChess */;
-			targetProxy = BB8976082EBEE3B2003E0F30 /* PBXContainerItemProxy */;
-		};
-		BB8976132EBEE3B2003E0F30 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB8975F92EBEE3B0003E0F30 /* CrackChess */;
-			targetProxy = BB8976122EBEE3B2003E0F30 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		BB8976192EBEE3B2003E0F30 /* Debug */ = {
+		BBE3DDFB2EC334F90063D2C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -355,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		BB89761A2EBEE3B2003E0F30 /* Release */ = {
+		BBE3DDFC2EC334F90063D2C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -411,7 +271,7 @@
 			};
 			name = Release;
 		};
-		BB89761C2EBEE3B2003E0F30 /* Debug */ = {
+		BBE3DDFE2EC334F90063D2C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -423,17 +283,7 @@
 				DEVELOPMENT_TEAM = L25P6USMRT;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
-				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
-				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
-				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
-				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
-				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
-				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -445,7 +295,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JustDoit.net.cn.CrackChess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,7 +311,7 @@
 			};
 			name = Debug;
 		};
-		BB89761D2EBEE3B2003E0F30 /* Release */ = {
+		BBE3DDFF2EC334F90063D2C3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -473,17 +323,7 @@
 				DEVELOPMENT_TEAM = L25P6USMRT;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
-				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
-				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
-				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
-				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
-				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
-				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
-				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
-				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
-				ENABLE_RESOURCE_ACCESS_USB = NO;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,7 +335,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = JustDoit.net.cn.CrackChess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,121 +350,23 @@
 			};
 			name = Release;
 		};
-		BB89761F2EBEE3B2003E0F30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L25P6USMRT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JustDoit.net.cn.CrackChessTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrackChess.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CrackChess";
-			};
-			name = Debug;
-		};
-		BB8976202EBEE3B2003E0F30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L25P6USMRT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JustDoit.net.cn.CrackChessTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CrackChess.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CrackChess";
-			};
-			name = Release;
-		};
-		BB8976222EBEE3B2003E0F30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L25P6USMRT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JustDoit.net.cn.CrackChessUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = CrackChess;
-			};
-			name = Debug;
-		};
-		BB8976232EBEE3B2003E0F30 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L25P6USMRT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JustDoit.net.cn.CrackChessUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRING_CATALOG_GENERATE_SYMBOLS = NO;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = CrackChess;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BB8975F52EBEE3B0003E0F30 /* Build configuration list for PBXProject "CrackChess" */ = {
+		BBE3DDED2EC334F80063D2C3 /* Build configuration list for PBXProject "CrackChess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB8976192EBEE3B2003E0F30 /* Debug */,
-				BB89761A2EBEE3B2003E0F30 /* Release */,
+				BBE3DDFB2EC334F90063D2C3 /* Debug */,
+				BBE3DDFC2EC334F90063D2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB89761B2EBEE3B2003E0F30 /* Build configuration list for PBXNativeTarget "CrackChess" */ = {
+		BBE3DDFD2EC334F90063D2C3 /* Build configuration list for PBXNativeTarget "CrackChess" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB89761C2EBEE3B2003E0F30 /* Debug */,
-				BB89761D2EBEE3B2003E0F30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB89761E2EBEE3B2003E0F30 /* Build configuration list for PBXNativeTarget "CrackChessTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB89761F2EBEE3B2003E0F30 /* Debug */,
-				BB8976202EBEE3B2003E0F30 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB8976212EBEE3B2003E0F30 /* Build configuration list for PBXNativeTarget "CrackChessUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB8976222EBEE3B2003E0F30 /* Debug */,
-				BB8976232EBEE3B2003E0F30 /* Release */,
+				BBE3DDFE2EC334F90063D2C3 /* Debug */,
+				BBE3DDFF2EC334F90063D2C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -632,7 +374,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BB8976302EBEE494003E0F30 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		BB5E73102EC3360500057F9D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
@@ -640,15 +382,28 @@
 				minimumVersion = 1.23.1;
 			};
 		};
+		BB5E73132EC3363900057F9D /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BB8976312EBEE494003E0F30 /* ComposableArchitecture */ = {
+		BB5E73112EC3360500057F9D /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BB8976302EBEE494003E0F30 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = BB5E73102EC3360500057F9D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		BB5E73142EC3363900057F9D /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB5E73132EC3363900057F9D /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = BB8975F22EBEE3B0003E0F30 /* Project object */;
+	rootObject = BBE3DDEA2EC334F80063D2C3 /* Project object */;
 }
