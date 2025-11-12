@@ -10,7 +10,6 @@
 #import "OpenCVWrapper.h"
 #import "OpenCVWrapper_Internal.h"  // ✅ only used here
 #import <opencv2/opencv.hpp>
-#import <Cocoa/Cocoa.h>        // For NSImage
 #import <CoreGraphics/CoreGraphics.h> // For accessing pixel data
 #import <Foundation/Foundation.h>
 

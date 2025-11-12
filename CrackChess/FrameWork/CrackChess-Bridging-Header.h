@@ -4,3 +4,5 @@
 
 
 #import "OpenCVWrapper.h"
+
+#import "OpenCVClient.h"

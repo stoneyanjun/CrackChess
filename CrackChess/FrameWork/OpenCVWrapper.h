@@ -7,7 +7,6 @@
 
 #import "OpenCVPrefix.h"
 #import <Foundation/Foundation.h>
-#import <Cocoa/Cocoa.h> // NSImage
 
 NS_ASSUME_NONNULL_BEGIN
 
